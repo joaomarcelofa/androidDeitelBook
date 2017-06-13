@@ -241,7 +241,7 @@
                 android:id="@+id/customTipTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="0%"
+                android:text="20%"
                 android:textColor="@color/black"
                 android:paddingBottom="4dp"
                 android:layout_weight="2"
@@ -270,7 +270,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/tipCustomeditText"
+                android:id="@+id/tipCustomEditText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/defaultValue"
@@ -297,7 +297,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/totalCustomeditText"
+                android:id="@+id/totalCustomEditText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/defaultValue"
