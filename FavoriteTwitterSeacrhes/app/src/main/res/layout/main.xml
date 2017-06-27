@@ -41,12 +41,11 @@
                 android:id="@+id/tagEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/tagPrompt"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="4"
-                android:inputType="text"
+                android:hint="@string/tagPrompt"
                 android:imeOptions="actionDone"
-                >
+                android:inputType="text">
 
             </EditText>
 
@@ -59,6 +58,7 @@
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:layout_gravity="center_vertical"
+
                 >
 
             </Button>
@@ -99,15 +99,15 @@
                 android:id="@+id/queryScrollView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/lightOrange"
                 android:layout_weight="1"
-                android:padding="5dp"
-                >
+                android:background="@color/lightOrange"
+                android:padding="5dp">
+
                 <TableLayout
                     android:id="@+id/queryTableLayout"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:stretchColumns="*">
+                    android:layout_weight="1">
 
                 </TableLayout>
 
