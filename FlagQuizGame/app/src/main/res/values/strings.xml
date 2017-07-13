@@ -6,7 +6,7 @@
     <string name="guesses">guesses</string>
     <string name="incorrect_answer">Incorrect !</string>
     <string name="more_regions_title">More regions required</string>
-    <String name="more_regions_message">There are not enough countries in the selected region. Please select more regions.</String>
+    <string name="more_regions_message">There are not enough countries in the selected region. Please select more regions.</string>
     <string name="of">of</string>
     <string name="ok">OK</string>
     <string name="question">Question</string>
