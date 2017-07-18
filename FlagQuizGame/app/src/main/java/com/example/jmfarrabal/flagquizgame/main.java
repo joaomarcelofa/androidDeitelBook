@@ -7,6 +7,7 @@ import android.os.Bundle;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
@@ -68,7 +69,7 @@ public class main extends AppCompatActivity {
         answerTextView = (TextView) findViewById(R.id.answerTextView);
 
         questionNumberTextView.setText(getResources().getString(R.string.question) + "1 " +
-        getResources().getString(R.string.of) + "10" );
+        getResources().getString(R.string.of) + " 10" );
 
         resetQuiz();
     }
@@ -85,6 +86,7 @@ public class main extends AppCompatActivity {
             Set<String> regions = regionsMap.keySet();
 
             for(String region : regions){
+
                 if(regionsMap.get(region)) {
                     String[] paths = assets.list(region);
 
@@ -105,8 +107,8 @@ public class main extends AppCompatActivity {
         int flagCounter = 1;
         int numberOfFlags = fileNameList.size();
 
+        // Sorteando as bandeiras e salvando na lista quizCountriesList
         while(flagCounter <= 10){
-            Log.e(TAG,"Numero foi : " + String.valueOf(numberOfFlags));
             int randomIndex = random.nextInt(numberOfFlags);
             String fileName = fileNameList.get(randomIndex);
 
