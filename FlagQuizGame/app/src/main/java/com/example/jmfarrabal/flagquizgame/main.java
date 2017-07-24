@@ -11,9 +11,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.EventListener;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
@@ -74,11 +72,13 @@ public class main extends AppCompatActivity {
         random = new Random();
         handler = new Handler();
 
+        // Carregando animação no XML
         shakeAnimation = AnimationUtils.loadAnimation(this,R.anim.incorrect_shaking);
         shakeAnimation.setRepeatCount(3);
 
         String[] regionNames = getResources().getStringArray(R.array.regionList);
 
+        // Populando um map com os nomes das regiões e se estão habilitados
         for(String region: regionNames)
             regionsMap.put(region,true);
 
@@ -101,11 +101,12 @@ public class main extends AppCompatActivity {
         fileNameList.clear();
 
         try{
-
+            // Set é um conjunto que não tem repetição
             Set<String> regions = regionsMap.keySet();
 
             for(String region : regions){
 
+                // Pega o valor boolean mapeado na chave região
                 if(regionsMap.get(region)) {
                     String[] paths = assets.list(region);
 
@@ -141,6 +142,7 @@ public class main extends AppCompatActivity {
 
     private void loadNextFlag(){
 
+        // Pega o nome da próxima imagem que vai aparecer removendo este elemento da lista
         String nextImageName = quizCountriestList.remove(0);
         correctAnswer = nextImageName;
 
@@ -247,6 +249,7 @@ public class main extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
+                            answerTextView.setText("");
                             loadNextFlag();
                         }
                     },1000
